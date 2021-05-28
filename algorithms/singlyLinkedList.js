@@ -29,14 +29,13 @@ class SinglyLinkedList{
 
         let current = this.head
         let secondLast = null
-        
+
         while (current){
-            if (current.next !== null){
-                secondLast = current
-            }
+            current.next !== null ? secondLast = current : null
             current = current.next
         }
         this.tail = secondLast
+        this.tail.next = null
         this.length--
         console.log(this)
         return this
