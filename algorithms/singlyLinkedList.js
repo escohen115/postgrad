@@ -24,8 +24,12 @@ class SinglyLinkedList{
         return this;
     }
     pop(){
+
+        if (!this.head) return undefined
+
         let current = this.head
         let secondLast = null
+        
         while (current){
             if (current.next !== null){
                 secondLast = current
