@@ -37,8 +37,20 @@ class SinglyLinkedList{
         this.tail = secondLast
         this.tail.next = null
         this.length--
-        console.log(this)
-        return this
+        if (this.length === 0){
+            this.head = null
+            this.tail = null
+        }
+        return current
+    }
+
+    shift(){
+        if (this.head === null) return undefined
+        let temp = this.head
+        this.head = temp.next
+        this.length --
+        temp.next = null
+        return temp
     }
 }
 
