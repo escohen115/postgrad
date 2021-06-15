@@ -7,5 +7,4 @@ function bestTimeToBuyAndSell(prices){
     }
     return profit
 }
-
 bestTimeToBuyAndSell([1,3,2,1,5])
