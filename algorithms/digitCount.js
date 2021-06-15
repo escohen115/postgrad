@@ -18,8 +18,6 @@ function getDigit (num, place){
     return (Math.floor(num) / Math.pow(10, i)) % 10
 }
 
-
-
 function mostDigits(arr){
     let max = -Infinity
     for (let i of arr){
