@@ -10,8 +10,6 @@ function validAnagram (str1, str2){
     for (let char of str2){
         freq2[char] = ++freq2[char] || 1
     }
-//     console.log(freq1)
-//     console.log(freq2)
     for (let key in freq1){
         if (!(key in freq2)){
             return false
