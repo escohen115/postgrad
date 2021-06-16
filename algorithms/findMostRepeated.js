@@ -1,9 +1,11 @@
 function fmr(n){
     let answer = null
     let hash = {}
+    
     for(let i of n){
         hash[i] = ++hash[i] || 1
     }
+
     let freq = Math.max(...Object.values(hash))
     Object.keys(hash).forEach(function(key){
         if (hash[key]===freq){
