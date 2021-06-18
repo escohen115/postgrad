@@ -1,17 +1,17 @@
 function countUniqueValues(arr){
-    let j = 0
-    let i = 1
+    let j = 1
+    let i = 0
     while(i <= arr.length){
-        if(arr[i] === arr[j]){
-          i++
+        if(arr[j] === arr[i]){
+          j++
         }
-        if (arr[i] !== arr[j]){
-            j++
-            arr[j] = arr[i]
+        if (arr[j] !== arr[i]){
             i++
+            arr[i] = arr[j]
+            j++
         }
     }
-    return arr.slice(0,j)
+    return arr.slice(0,i)
 }  
 countUniqueValues([1,1,2,3,4,4,5,5,5,5,6,7,8,9])
  

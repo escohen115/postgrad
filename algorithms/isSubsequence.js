@@ -12,7 +12,6 @@ function isSubsequence (str1, str2){
         j++
     }
 }
-    
 
 isSubsequence('acb', 'abc')
 // isSubsequence('abc', 'abracadabra')

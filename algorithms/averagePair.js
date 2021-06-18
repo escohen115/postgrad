@@ -15,4 +15,4 @@ function averagePair(arr, target){
     return false 
 }
 
-averagePair([1,2,3],2.5)
+averagePair([1,2,3], 2.5)
