@@ -5,7 +5,6 @@ function minSubArrayLen(arr, sum) {
     let minLen = Infinity
 
     while (start < arr.length){
-
        if (total < sum && end < arr.length){
            total+=arr[end]
            end++
