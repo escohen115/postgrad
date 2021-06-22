@@ -5,7 +5,7 @@ function areThereDuplicates(){
            return true
        }
        else{
-          freq[arguments[i]]=1
+          freq[arguments[i]] = 1
        }
    }
    return false
