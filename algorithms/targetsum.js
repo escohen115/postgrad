@@ -1,9 +1,9 @@
 function targetSum(arr, target){
     let left = 0
     let right = arr.length-1
-    while (left<right){
-        if (arr[left]+arr[right]==target){
-            return([arr[left],arr[right]])
+    while (left < right){
+        if (arr[left] + arr[right] == target){
+            return ([arr[left], arr[right]])
         }
         if (arr[left]+arr[right]>target){
             right--
