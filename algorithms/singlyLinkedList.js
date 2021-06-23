@@ -25,6 +25,7 @@ class SinglyLinkedList {
         this.length++;
         return this;
     }
+    
     pop() {
         if (!this.head) return undefined;
         var current = this.head;
