@@ -10,7 +10,6 @@ function strMatch(haystack, needle){
             return i
         }
     } 
-
     return  -1
 }
 
