@@ -6,8 +6,8 @@ function maxSubarraySum(arr, num){
     }
     console.log(maxSum)
     tempSum=maxSum
-    for (let i=num;i<arr.length;i++){
-        tempSum = tempSum-arr[i-num]+arr[i]
+    for (let i = num; i < arr.length; i++){
+        tempSum = tempSum - arr[i-num] + arr[i]
         maxSum = Math.max(tempSum, maxSum)
     }
     return maxSum
