@@ -6,10 +6,10 @@ function averagePair(arr, target){
             return true
         }
         if (arr[left] + arr[right] / 2 > target){
-            right--
+            right --
         }
         if (arr[left]+arr[right] / 2 < target){
-            left++
+            left ++
         }
     }
     return false 
