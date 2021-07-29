@@ -20,9 +20,15 @@ function sortMerge(arr1, arr2){
     if (y < arr2.length){
         res.push(...arr2.slice(y,arr2.length))
     }
-
     return res
 }
 
 
-sortMerge([1],[2,4,6])
+function mergeSort(arr){
+    if (arr.length <= 1) return arr
+    let mid = Math.floor(arr.length/2)
+    let arr1 = arr.slice(0,mid)
+    let arr2 = arr.slice(mid)
+    return merge (mergeSort(arr1), mergeSort(arr2))
+}
+
