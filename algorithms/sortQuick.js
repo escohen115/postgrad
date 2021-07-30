@@ -29,3 +29,32 @@ function sort(arr){
 
 
 pivot ([3,1,2,4], 0)
+
+
+
+
+function pivotHelper(arr){
+    let pivotIndex = Math.floor(arr.length / 2)
+    let comp = arr[pivotIndex]
+    let lessThan = 0
+
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] < comp){
+            lessThan ++
+        }    
+    }
+    let temp = arr[lessThan]
+    arr[lessThan] = arr[pivotIndex]
+    arr[pivotIndex] = temp
+    return pivotIndex
+}
+
+
+function quickSort(arr){
+    for (let i = 0; i < arr.length; i++){
+        pivotHelper(arr)
+    }
+    return arr
+}
+
+quickSort([0,9,7,8,34,3,2,4,1,5])
