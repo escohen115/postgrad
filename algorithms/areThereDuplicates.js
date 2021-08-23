@@ -1,15 +1,15 @@
-function areThereDuplicates(){
-   let freq = {}
-   for (let i = 0; i < arguments.length; i++){
-       if (freq[arguments[i]]){
-           return true
-       }
-       else{
-          freq[arguments[i]] = 1
-       }
-   }
-   return false
-}
+// function areThereDuplicates(){
+//    let freq = {}
+//    for (let i = 0; i < arguments.length; i++){
+//        if (freq[arguments[i]]){
+//            return true
+//        }
+//        else{
+//           freq[arguments[i]] = 1
+//        }
+//    }
+//    return false
+// }
 
 function duplicates (arr){
     let set = new Set(arr)
@@ -20,7 +20,7 @@ function duplicates (arr){
 
 
 duplicates([1,2,3,3])
-
+asdfasdfas
 
 areThereDuplicates(1,2,2)
 
