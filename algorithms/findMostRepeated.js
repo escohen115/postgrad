@@ -21,7 +21,6 @@ fmr([3,4,4,4,4,4,6,6,6,1,1,4,4,6,6,6,6,6,6,6,6,6,6,6,6,4,4,4])
 
 
 function fmr (arr) {
-
     let freq = {}
     let max = -Infinity
     let answer = null
@@ -38,3 +37,27 @@ function fmr (arr) {
     }
     return parseInt(answer)
 }
+
+
+// 8/24/21
+function fmr (arr){
+    let hash = {}
+    let answer = 0
+    let max = 0
+    for (let i of arr){
+        hash[i] ? hash[i] += 1 : hash[i] = 1
+    }
+
+    for (let i in hash){
+        if (hash[i] > max){
+            max = hash[i]
+            answer = i
+        }
+    }
+    return parseInt(answer)
+}
+
+
+
+fmr ([1,2,3,4,3,3,1])
+
