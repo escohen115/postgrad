@@ -20,8 +20,8 @@ function duplicates (arr){
 
 
 duplicates([1,2,3,3])
-asdfasdfas
 
-areThereDuplicates(1,2,2)
+
+// areThereDuplicates(1,2,2)
 
 

@@ -18,3 +18,29 @@ function findLongestSubstring(str) {
 }
 findLongestSubstring('abcadbfgh')
 
+
+// 8/24/21
+
+function flss(s){
+  let uniq = new Set()
+  let max = 0
+  let i = 0
+  let j = 0
+  
+  while (i < s.length) {
+      if (!uniq.has(s[i])){
+          uniq.add(s[i])
+          i++
+          max = Math.max(max,uniq.size)
+      }
+      else{
+          uniq.delete(s[j])
+          j++
+      }
+  }
+  return max
+}
+
+
+
+

@@ -14,13 +14,3 @@ function countUniqueValues(arr){
     return arr.slice(0,i)
 }  
 countUniqueValues([1,1,2,3,4,4,5,5,5,5,6,7,8,9])
- 
-
-// function countUniqueValues(arr){
-//     let hash = {}
-//     for (let i = 0; i < arr.length; i++){
-//         let char = arr[i]
-//         hash[char] ? hash[char] += 1 : hash[char] = 1 
-//     }
-//     return Object.keys(hash).length
-// }
