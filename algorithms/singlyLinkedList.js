@@ -30,7 +30,8 @@ class SinglyLinkedList {
         if (!this.head) return undefined;
         let current = this.head;
         let newTail = current;
-        while (current.next) {
+        while (current.next) {    // newTail only gets updated when we know there's something after it. this is because we're searching
+                                  // for the second to last element 
             newTail = current;
             current = current.next;
         }
