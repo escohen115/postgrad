@@ -14,7 +14,6 @@ let partition = (list, k) => {
         }
         elem = elem.next
     }
-
     list1.tail.next = list2.head
     
 }
