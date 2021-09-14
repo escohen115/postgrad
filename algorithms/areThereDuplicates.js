@@ -18,7 +18,6 @@ function duplicates (arr){
 }
 
 
-
 duplicates([1,2,3,3])
 
 
