@@ -50,6 +50,16 @@ function pivotHelper(arr){
 }
 
 
+
+
+
+
+
+
+
+
+
+
 function quickSort(arr){
     for (let i = 0; i < arr.length; i++){
         pivotHelper(arr)
@@ -58,3 +68,41 @@ function quickSort(arr){
 }
 
 quickSort([0,9,7,8,34,3,2,4,1,5])
+
+
+function partition(arr, start = 0, end = arr.length - 1) {
+  function swap (arr, a, b){
+     let temp = arr[a]
+     arr[a] = arr[b]
+     arr[b] = temp
+  }
+
+  // We are assuming the partition is always the first element
+  let partition = arr[start];
+  let swapIdx = start;
+
+  for (let i = start + 1; i <= end; i++) {
+    if (arr[i] < partition) {
+      swapIdx++;
+      swap(arr, swapIdx, i);
+    }
+  }
+
+  // Swap the partition from the start the swapPoint
+  swap(arr, start, swapIdx);
+  return swapIdx;
+}
+
+
+function quickSort(arr, left = 0, right = arr.length -1){
+    if (left < right){
+        let partitionIndex = partition(arr, left, right) //3
+        //left
+        quickSort(arr,left,partitionIndex-1);
+        //right
+        quickSort(arr,partitionIndex+1,right);
+      }
+     return arr;
+} 
+           
+quickSort([100,-3,2,4,6,9,1,2,5,3,23])
