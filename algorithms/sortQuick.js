@@ -50,16 +50,6 @@ function pivotHelper(arr){
 }
 
 
-
-
-
-
-
-
-
-
-
-
 function quickSort(arr){
     for (let i = 0; i < arr.length; i++){
         pivotHelper(arr)
@@ -69,6 +59,8 @@ function quickSort(arr){
 
 quickSort([0,9,7,8,34,3,2,4,1,5])
 
+
+//good stuff ->
 
 function partition(arr, start = 0, end = arr.length - 1) {
   function swap (arr, a, b){
@@ -111,6 +103,6 @@ quickSort([100,-3,2,4,6,9,1,2,5,3,23])
 
 // quick sort pseudocode
 // solved through recursion
-// iterate through the array N times. 
+// iterate through the array N-1 times (for that many comparisons). 
 // at each iteration, move one element into its correct position by counting how many elements are smaller than it
-// 
+// return the index of the partition and split the array in half, sorting each side
