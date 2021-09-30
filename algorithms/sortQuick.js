@@ -103,8 +103,24 @@ quickSort([100,-3,2,4,6,9,1,2,5,3,23])
 
 // quick sort pseudocode
 // solved through recursion
-// iterate through array n-1 times
+// partition pseudocode
+// iterate through array.length - 1 times
 // take first item of array and move all items that are smaller to the left, larger to the right
-//
+// return index of sorted item
+// 
 
 
+function swap(arr,a,b){
+    let temp = arr[a]
+    arr[a] = arr[b]
+    arr[b] = temp
+}
+
+function partition(arr,start = 0, end = arr.length - 1){
+    let x = arr[start]
+    let index = start
+    for (let i = index+1; i <= end; i++){
+        if (arr[i])
+    }
+    
+}
