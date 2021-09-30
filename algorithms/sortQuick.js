@@ -106,3 +106,11 @@ function quickSort(arr, left = 0, right = arr.length -1){
 } 
            
 quickSort([100,-3,2,4,6,9,1,2,5,3,23])
+
+
+
+// quick sort pseudocode
+// solved through recursion
+// iterate through the array N times. 
+// at each iteration, move one element into its correct position by counting how many elements are smaller than it
+// 
