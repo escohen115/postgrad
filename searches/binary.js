@@ -16,4 +16,5 @@ function binarySearch(arr, val){
     return arr[middle] === val ? middle :-1
 }
 
+
 binarySearch([1,2,3,4],4)
