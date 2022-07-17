@@ -9,7 +9,10 @@ function pivot(arr, start = 0, end = arr.length - 1) {
   let swapIdx = start;
 
   for (let i = start + 1; i <= end; i++) { //compare each element with the "pivot", in this case the first array element
-    if (arr[i] < pivot) { //track how many values are less than it, so we can swap the pivot to be the last of them
+    if (arr[i] < pivot) { //if the element is less than the pivot, it needs to be moved to the left portion of the array.
+                         //we keep track of how far left we need to go by incrementing swapIndex to always be the index 
+                         //that's just to the right of the sorted portion. by swapping every element less than the pivot
+                         //to this index, we build up a left sorted half, and a right sorted half
       swapIdx++;
       swap(arr, swapIdx, i);
     }
