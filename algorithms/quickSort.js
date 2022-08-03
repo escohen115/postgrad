@@ -33,4 +33,34 @@ function quickSort(arr,left = 0, right = arr.length-1){
 
 }
 
-console.log(quickSort([4,5,3]))
+// console.log(quickSort([4,5,3]))
+
+
+
+function pivot(arr, start = 0, end = arr.length){
+    function swap(arr,a,b){
+        let temp = arr[a]
+        arr[a] = arr[b]
+        arr[b] = temp
+    }
+    let swapIndex = start
+    let pivot = arr[start]
+    for (let i=start+1;i<arr.length;i++){
+        if (arr[i] < pivot){
+            swapIndex++
+            swap(arr,i,swapIndex)
+        }
+    }
+    swap(arr, swapIndex, start)
+}
+
+function quickSort2(arr,left=0,right=arr.length){ 
+    if (left < right){
+        let pivotIndex = pivot(arr,left,right)
+        quickSort(arr,left,pivotIndex)
+        quickSort(arr,pivotIndex,right)
+    }    
+    return arr
+}
+
+console.log(quickSort2([2,3,1,4]))
