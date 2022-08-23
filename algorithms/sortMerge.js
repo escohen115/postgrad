@@ -101,8 +101,6 @@ function mergeSort(arr){
     let right = arr.slice(mid)
 
     
-    
-
     return mergeTwoSortedArrays(mergeSort(left),mergeSort(right))
 }
 
