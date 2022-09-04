@@ -61,8 +61,8 @@ class BinarySearchTree {
     }
     BFS(){
         var node = this.root,
-            data = [],
-            queue = [];
+        data = [],
+        queue = [];
         queue.push(node);
 
         while(queue.length){
