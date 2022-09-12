@@ -37,33 +37,33 @@
 
 
 
-// function pivot(arr, start = 0, end = arr.length){
-//     function swap(arr,a,b){
-//         let temp = arr[a]
-//         arr[a] = arr[b]
-//         arr[b] = temp
-//     }
-//     let swapIndex = start
-//     let pivot = arr[start]
-//     for (let i=start+1;i<arr.length;i++){
-//         if (arr[i] < pivot){
-//             swapIndex++
-//             swap(arr,i,swapIndex)
-//         }
-//     }
-//     swap(arr, swapIndex, start)
-// }
+function pivot(arr, start = 0, end = arr.length){
+    function swap(arr,a,b){
+        let temp = arr[a]
+        arr[a] = arr[b]
+        arr[b] = temp
+    }
+    let swapIndex = start
+    let pivot = arr[start]
+    for (let i=start+1;i<arr.length;i++){
+        if (arr[i] < pivot){
+            swapIndex++
+            swap(arr,i,swapIndex)
+        }
+    }
+    swap(arr, swapIndex, start)
+}
 
-// function quickSort2(arr,left=0,right=arr.length){ 
-//     if (left < right){
-//         let pivotIndex = pivot(arr,left,right)
-//         quickSort(arr,left,pivotIndex)
-//         quickSort(arr,pivotIndex,right)
-//     }    
-//     return arr
-// }
+function quickSort(arr,left=0,right=arr.length){ 
+    if (left < right){
+        let pivotIndex = pivot(arr,left,right)
+        quickSort(arr,left,pivotIndex-1)
+        quickSort(arr,pivotIndex+1,right)
+    }    
+    return arr
+}
 
-// console.log(quickSort2([2,3,1,4]))
+console.log(quickSort([2,3,1,4]))
 
 
 
@@ -76,33 +76,9 @@
 
 
 //write a helper function, that, given an array, picks an element as a pivot (i'll use start) and sorts that individual element by moving all elements greater than it to the right, and less than it to the right
-//recursively call this function while dividing the array into smaller and smaller halves (log n)
-
-function pivot(arr){
-    let pivot = arr[0]
-    function swap(arr,index1,index2){
-        let temp = arr[index1]
-        arr[index1] = arr[index2]
-        arr[index2] = temp
-    }
-    pivotIndex = 0
-
-    for (let i=pivotIndex; i < arr.length; i++){
-        if (arr[i] < pivot){
-            swap(arr, i, pivotIndex)
-            pivotIndex++    
-        }
-    }
-    return pivotIndex
-}
-
-function quickSort(){
-    
-}
+//recursively call this function while dividing the array into smaller and smaller halves (n log n)
 
 
 
 
-
-console.log(pivot([3,2,1]))
 

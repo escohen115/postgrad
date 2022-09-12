@@ -21,4 +21,5 @@ function remove (head, n){
         left = left.next
     }
     left.next = left.next.next
+    
 }
