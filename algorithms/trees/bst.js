@@ -73,6 +73,9 @@ class BinarySearchTree {
         }
         return data;
     }
+
+
+
     DFSPreOrder(){
         var data = []; 
         function traverse(node){ //this is a recursive function that adds the visited node to data, as we encounter it, traversing down the tree.
@@ -83,9 +86,12 @@ class BinarySearchTree {
         traverse(this.root);
         return data;
     }
-    DFSPostOrder(){
+
+
+
+    DFSPostOrder(){// called postOrder b/c we only visit a node post visiting the left and right
         var data = [];
-        function traverse(node){ //here we only add the node (on our way back up?)
+        function traverse(node){ //here we only add the node (on our way "back up")
             if(node.left) traverse(node.left);
             if(node.right) traverse(node.right);
             data.push(node.value);
@@ -93,7 +99,10 @@ class BinarySearchTree {
         traverse(this.root);
         return data;
     }
-    DFSInOrder(){
+
+
+
+    DFSInOrder(){ //left, node, right - this will return all the nodes lowest to greatest
         var data = [];
         function traverse(node){
             if(node.left) traverse(node.left);
@@ -104,6 +113,13 @@ class BinarySearchTree {
         return data;
     }
 }
+
+  5
+ / \
+3   7
+
+
+
 
 
 var tree = new BinarySearchTree();
