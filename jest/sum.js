@@ -10,8 +10,13 @@ function subtract(a,b){
     return a-b
 }
 
+function cloneArray(arr){
+    return[...arr]
+}
+
 module.exports = {
     sum: sum,
-    subtract: subtract
+    subtract: subtract,
+    cloneArray: cloneArray
 }
 
