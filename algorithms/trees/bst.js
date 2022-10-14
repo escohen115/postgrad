@@ -63,13 +63,13 @@ class BinarySearchTree {
         var node = this.root,
         data = [],
         queue = [];
-        queue.push(node);
+        queue.push(node); 
 
-        while(queue.length){
-           node = queue.shift();
-           data.push(node.value);
-           if(node.left) queue.push(node.left);
-           if(node.right) queue.push(node.right);
+        while(queue.length){ 
+           node = queue.shift(); //grab the last item from the queue
+           data.push(node.value); //put it in our data array (and we've now traversed it)
+           if(node.left) queue.push(node.left); //grab that node's .left and throw it in the queue
+           if(node.right) queue.push(node.right); //grab that node's .right and throw it in the queue
         }
         return data;
     }
