@@ -14,6 +14,10 @@ function cloneArray(arr){
     return[...arr]
 }
 
+function helper(){
+    console.log('helper')
+}
+
 module.exports = {
     sum: sum,
     subtract: subtract,
