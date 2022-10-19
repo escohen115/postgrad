@@ -27,4 +27,4 @@ var hasCycle = function(head) {
     }
 
 
-};
+}; 
