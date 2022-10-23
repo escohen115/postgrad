@@ -33,3 +33,27 @@ var isPalindrome = function(s) {
     }
     return true
 };
+
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isPalindrome = function(s) {
+  
+    function recurse(s){
+        
+        if(s.length === 1 || s.length === 0) return true
+        
+        if (s[0] === s[s.length-1]){
+            return recurse(s.slice(1,s.length-1))
+        }else{
+            return false
+        }
+    }
+    
+    return recurse(str)
+    
+    
+    
+};
