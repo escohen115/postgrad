@@ -15,3 +15,22 @@ var singleNumber = function(nums) {
     }
     
 };
+
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var singleNumber = function(nums) {
+    
+    let map = {}
+    nums.forEach(num=>{
+        if(map[num]){
+            map[num]++
+        }else{
+            map[num] =1
+        }
+    })
+    return Object.keys(map).filter(key=>map[key]===1)[0]
+    
+};
