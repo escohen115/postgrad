@@ -32,4 +32,20 @@ function palindromePermutation(str){
 }
 
 
-palindromePermutation('Tact Coa')
+// palindromePermutation('Tact Coa')
+
+
+function palindome(s){
+    if (s.length <= 1 ){
+        // console.log("true")
+      return true
+    }
+    if(s[0] === s[s.length-1]){
+      return palindome(s.slice(1,s.length-1))
+    }else{
+        // console.log("false")
+      return false
+    }
+}
+
+console.log(palindome("amanaplanalolanalpanama"))

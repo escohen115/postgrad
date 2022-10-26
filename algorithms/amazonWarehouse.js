@@ -4,15 +4,11 @@
 
 
 
-
-
-
-
-
 function countProducts (s){
     let total = 0
     let counter = 0
     let status = "stop"
+    
     function toggle (){
         status = status === "start" ? "stop" : "start"
     }
@@ -80,4 +76,4 @@ function mergeSort(arr){
 
 
 
-console.log(mergeSort([3,4,2,1,5]))
+// console.log(mergeSort([3,4,2,1,5]))
