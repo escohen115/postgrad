@@ -89,7 +89,7 @@ class BinarySearchTree {
 
 
 
-    DFSPostOrder(){// called postOrder b/c we only visit a node post visiting the left and right
+    DFSPostOrder(){// called postOrder b/c we only visit a node after visiting the left and right
         var data = [];
         function traverse(node){ //here we only add the node (on our way "back up")
             if(node.left) traverse(node.left);
