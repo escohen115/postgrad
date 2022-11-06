@@ -16,3 +16,6 @@ var removeElement = function(arr, num) {
   return arr.length - counter
     
 };
+
+
+removeElement([1,2,3],1)
