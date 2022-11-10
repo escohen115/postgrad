@@ -5,7 +5,7 @@
 var canBeIncreasing = function(nums) {
     let arr = []
     
-    // function that checks if nums is in order, will nums be in increasing order?
+    // function that checks if nums is in order and in increasing order?
     function check(arr){
         let sortedCopy = [...arr].sort((a,b)=>a-b)
         let j = 0
