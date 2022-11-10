@@ -59,8 +59,13 @@ function checkPerm (str1, str2){
     let map1 = {}
     let map2 = {}
 
-    Array.from(str1).forEach(char=>map1[char] ? map1[char]+=1 : map1[char] = 1)
-    Array.from(str2).forEach(char=>map2[char] ? map2[char]+=1 : map2[char] = 1)
+    for (let char of str1){
+        map1[char] ? map1[char]+=1 : map1[char] = 1
+    }
+
+    for (let char of str2){
+        map2[char] ? map2[char]+=1 : map2[char] = 1
+    }
 
     Object.keys(map1).forEach(key=>{
         if(map1[key] !== map2[key]){
@@ -79,4 +84,4 @@ function checkPerm (str1, str2){
 
 }
 
-console.log(checkPerm('mydffamom','momadffmy'))
+console.log(checkPerm('mydffamom','momdadffmy'))
